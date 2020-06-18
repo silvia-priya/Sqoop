@@ -1,0 +1,10 @@
+#The below sqoop command is used to import a mysql table named Orders into a HDFS location
+$sqoop import 
+--connect jdbc:mysql://localhost:3306/<<databasename>> 
+--table <<tablename>> 
+--username <<username>> 
+--password <<password>> 
+--columns <columnname> 
+--target-dir <<HDFS directory name>> 
+--compression-codec gzip
+-m 1 
